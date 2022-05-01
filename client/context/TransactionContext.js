@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {contractABI, contractAddress} from '../lib/constants'
 import {ethers} from 'ethers'
 import {client} from '../lib/SanityClient'
+import { useRouter } from 'next/router'
+
 
 export const TransactionContext = React.createContext()
 
@@ -25,11 +27,13 @@ const getEthereumContract = () => {
 
 export const TransactionProvider = ({children}) => {
     const [currentAccount, setCurrentAccount] = useState()
-    const [IsLoading, setIsLoading] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
     const [formData, setFormData] = useState({
         addressTo: "",
         amount: "",
     })
+
+    const router = useRouter()
 
 
     useEffect(() => {
@@ -92,7 +96,7 @@ export const TransactionProvider = ({children}) => {
                     {
                         from: connectedAccount,
                         to: addressTo,
-                        gas: '0x7EF40', // 720000 Gwei
+                        gas: '0xC3500', // 800000 Gwei
                         value: parsedAmount._hex,
                     },
                 ],
@@ -161,6 +165,16 @@ export const TransactionProvider = ({children}) => {
         return
     }
 
+    // Trigger loading modal
+    useEffect(() => {
+        if (isLoading){
+            router.push(`/?loading=${currentAccount}`)
+        }else{
+            router.push(`/`)
+        }
+
+    }, [isLoading])
+
     return (
         <TransactionContext.Provider
             value = {{
@@ -169,6 +183,7 @@ export const TransactionProvider = ({children}) => {
                 sendTransaction,
                 handleChange,
                 formData,
+                isLoading,
             }}
         >
             {children}
