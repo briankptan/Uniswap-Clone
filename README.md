@@ -1,6 +1,12 @@
 # Uniswap-Clone
 Uniswap Project  
-
+  
+ 559 Final Project  
+Brian Tan  
+Dano Nahabedian  
+Triet Phan  
+Kristopher Swartzbaugh  
+  
 To run this web app, follow these instructions.  
 Pull from this repo.  
   
