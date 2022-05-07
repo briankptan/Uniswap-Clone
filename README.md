@@ -35,4 +35,4 @@ Project successfully deployed online.
 https://559finalproject.vercel.app  
   
   
-<img src="559ProjectDemo.gif" width=400 height=400><br>
+<img src="559ProjectDemo.gif" width=800 height=600><br>
