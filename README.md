@@ -23,4 +23,7 @@ npx hardhat run scripts/deploy.js --network rinkeby
 sanity start  
 
 On a web browser, go to localhost:3000 to interact with the Uniswap interface.  
-Go to localhost:3333 to interact with the user/transaction tracker supported by the Sanity.io interface.
+Go to localhost:3333 to interact with the user/transaction tracker supported by the Sanity.io interface.  
+  
+Project successfully deployed online.  
+https://559finalproject.vercel.app
