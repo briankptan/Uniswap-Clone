@@ -22,5 +22,5 @@ npx hardhat run scripts/deploy.js --network rinkeby
 //sanity localhost run. navigate to studio.  
 sanity start  
 
-On a web browser, go to localhost:3000 to interact with the Uniswap interface.
+On a web browser, go to localhost:3000 to interact with the Uniswap interface.  
 Go to localhost:3333 to interact with the user/transaction tracker supported by the Sanity.io interface.
