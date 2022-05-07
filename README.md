@@ -32,4 +32,7 @@ On a web browser, go to localhost:3000 to interact with the Uniswap interface.
 Go to localhost:3333 to interact with the user/transaction tracker supported by the Sanity.io interface.  
   
 Project successfully deployed online.  
-https://559finalproject.vercel.app
+https://559finalproject.vercel.app  
+  
+  
+<img src="559ProjectDemo.gif" width=400 height=400><br>
